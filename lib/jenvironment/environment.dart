@@ -82,7 +82,7 @@ class JEnvironment {
   /// Las claves y los valores en el mapa son cadenas, representando los nombres de las variables y sus valores, respectivamente.
   ///
   /// Lanza una [EnvNotLoadedException] si `JEnvironment.load()` no ha sido llamado todavía.
-  static Map<String, String> get env {
+  static Map<String, String?> get env {
     _ensureLoaded();
     return Map.unmodifiable(_envVars);
   }
